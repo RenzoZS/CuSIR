@@ -1,1 +1,1 @@
-# SIR_CuPy
+# CuRDE
