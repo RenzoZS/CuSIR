@@ -1,2 +1,3 @@
 # CuRDES
-## CuRDES si a CUDA based reaction diffusion equations solver.
+
+CuRDES is a Cuda based Reaction-Diffusion Equations Solver.
