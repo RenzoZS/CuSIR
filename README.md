@@ -1,3 +1,3 @@
-# CuRDES
+# CuPDES
 
-CuRDES is a Cuda based Reaction-Diffusion Equations Solver.
+CuPDES is a Cuda based Partial Differential Equations Solver.
