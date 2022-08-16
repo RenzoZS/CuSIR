@@ -1,3 +1,3 @@
-# CuPDES
+# CuRDES
 
-CuPDES is a Cuda based Partial Differential Equations Solver for Python written using CuPy.
+CuPDES is a Cuda based Reaction Diffusion Equations Solver for Python written using CuPy.
