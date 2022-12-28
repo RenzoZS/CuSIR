@@ -1,6 +1,6 @@
 # CuSIR
 
-CuSIR is a Cuda based solver for a diffusive SIR model with spatial rate transmisión dependence. 
+CuSIR is a Cuda based solver for a diffusive SIR model with spatial rate transmition dependence. 
 
 It basically solves the following system of equation with any given initial condition:
 
