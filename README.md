@@ -2,7 +2,7 @@
 
 CuSIR is a Cuda based solver for a diffusive SIR model with spatial rate transmition dependence. 
 
-It basically solves the following system of equation with any given initial condition:
+It basically solves the following system of reaction-diffusion equations with any given initial condition in 2 dimensions:
 
 $$
 \begin{align}
