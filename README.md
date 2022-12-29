@@ -26,5 +26,20 @@ To use the CuSIR package, you will need the following software and hardware:
 
 Please note that the CuSIR package requires a GPU with compute capability 3.5 or higher. You can check the compute capability of your GPU by consulting the documentation for your GPU or by using a tool like nvidia-smi.
 
+## Installation
+
+
+
+## Usage
+
+
+## Examples
+
+## References
+
+## License
+
+## Contact:
+
 
 
