@@ -1,6 +1,8 @@
 import cupy as cp
 from datetime import date
 
+#cuda kernels
+
 forces_0 = cp.ElementwiseKernel(
     'raw float64 S, raw float64 I, raw float64 H, float64 beta, float64 gamma, float64 DI,float64 DS, float64 vx, float64 vy, uint32 Lx, uint32 Ly',
     'float64 fS, float64 fI',
@@ -81,6 +83,7 @@ class System:
         Number of grid points in the x direction
     
     Ly : int
+        Number of grid points in the y direction
 
     beta : float or array
         Infection rate
@@ -114,6 +117,21 @@ class System:
 
 
     def __init__(self,Lx=1024,Ly=1024):
+
+        '''
+        Initialize the system on a 2D grid.
+
+        Parameters
+
+        ----------
+
+        Lx : int
+            Number of grid points in the x direction
+
+        Ly : int
+            Number of grid points in the y direction
+
+        '''
         
         self.Lx = Lx
         self.Ly = Ly
