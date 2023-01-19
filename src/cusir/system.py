@@ -71,7 +71,7 @@ euler = cp.ElementwiseKernel(
     'euler')
 
 
-class System:
+class system:
     '''
     Class to solve the SIR model on a 2D grid using the finite difference method and the Euler method. 
 
