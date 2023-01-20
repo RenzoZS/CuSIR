@@ -4,12 +4,12 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = "cusir"
-version = "1.0.7"
+version = "1.0.1"
 authors = [
   { name="renzozs", email="renzozagarrasaez@gmail.com" },
 ]
 keywords = ["sir", "epidemiology", "CuPy", "GPU", "CUDA", "diffusion", "reaction-diffusion","parallel computing"]
-description = "A SIR diffusive model based in CuPy solver"
+description = "A SIR diffusive model based in CuPy"
 readme = "READMEPyPI.md"
 requires-python = ">=3.7"
 classifiers = [

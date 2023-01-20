@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: cusir
-Version: 1.0.7
-Summary: A SIR diffusive model based in CuPy solver
+Version: 1.0.1
+Summary: A SIR diffusive model based in CuPy
 Author-email: renzozs <renzozagarrasaez@gmail.com>
 Project-URL: Homepage, https://github.com/RenzoZS/CuSIR
 Project-URL: Bug Tracker, https://github.com/RenzoZS/CuSIR/issues
