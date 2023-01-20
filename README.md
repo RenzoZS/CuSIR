@@ -1,18 +1,22 @@
----
-lang: en-US
----
-
+<!-- LTeX: language=en-US -->
 # CuSIR
 
 ## Introduction
 CuSIR is a Python code built on top of CuPy, a NumPy-like library for GPU-accelerated computing. It provides a solver for the two-dimensional diffusive SIR model, described by the following system of reaction-diffusion equations:
 
 $$
-\begin{align}   
+\begin{align}
+asd\\
+asd
+\end{align}
+$$
+
+$$
+\begin{aligned}   
 \partial_t S &= -\beta_{\mathbf{r}} S I - \gamma I + D_I \nabla^2 I \\ 
 \partial_t I &= \beta_{\mathbf{r}} S I + D_S \nabla^2 S - \mathbf{v} \cdot \nabla I,
-\end{align}
-$${#system}
+\end{aligned}$$
+
 where $S$ is the density of susceptible individuals, $I$ is the density of infected individuals, $\beta_{\mathbf{r}}$ is the transmission rate that depends on the location $\mathbf{r}$, $\gamma$ is the recovery/removal rate, $D_I$ and $D_S$ are diffusion coefficients, and $\mathbf{v}$ is the convection field. 
 
 ## Implementation
@@ -87,9 +91,6 @@ for _ in range(10000):
 S = s.S.get() # get() pulls the data from the GPU to the CPU as a NumPy array
 I = s.I.get()
 ```
-
-
-
 
 ## License
 
