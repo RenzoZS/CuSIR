@@ -19,7 +19,8 @@ The system is solved using a finite difference method on a uniform grid. The spa
 $$
 \begin{align}
 S^{n+1}_{i,j} &= S^n_{i,j} - \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t - \gamma I^n_{i,j} \Delta t + D_I \left( \frac{S^n_{i+1,j} - 2 S^n_{i,j} + S^n_{i-1,j}}{\Delta x^2} + \frac{S^n_{i,j+1} - 2 S^n_{i,j} + S^n_{i,j-1}}{\Delta y^2} \right) \Delta t,\\
-I^{n+1}_{i,j} &= I^n_{i,j} + \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t + D_S \left( \frac{I^n_{i+1,j} - 2 I^n_{i,j} + I^n_{i-1,j}}{\Delta x^2} + \frac{I^n_{i,j+1} - 2 I^n_{i,j} + I^n_{i,j-1}}{\Delta y^2} \right) \Delta t \\&- \mathbf{v}_{i,j} \cdot \left( \frac{I^n_{i+1,j} - I^n_{i-1,j}}{2 \Delta x}, \frac{I^n_{i,j+1} - I^n_{i,j-1}}{2 \Delta y} \right) \Delta t,\nonumber
+I^{n+1}_{i,j} &= I^n_{i,j} + \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t + D_S \left( \frac{I^n_{i+1,j} - 2 I^n_{i,j} + I^n_{i-1,j}}{\Delta x^2} + \frac{I^n_{i,j+1} - 2 I^n_{i,j} + I^n_{i,j-1}}{\Delta y^2} \right) \Delta t \\
+&- \mathbf{v}_{i,j} \cdot \left( \frac{I^n_{i+1,j} - I^n_{i-1,j}}{2 \Delta x}, \frac{I^n_{i,j+1} - I^n_{i,j-1}}{2 \Delta y} \right) \Delta t,\nonumber
 \end{align}
 $$
 
