@@ -51,10 +51,7 @@ This command will install the latest version of the CuSIR package. It is mandato
 
 ## Usage
 
-The CuSIR package provides a solver for the two-dimensional ([1-2](#system)) 
-diffusive SIR system. The solver is implemented in the `system` class, which is located in the `system` module.
-
-The following code shows how to use the `system` class to solve the diffusive SIR system:
+Almost everything is implemented in the `system` class, which is located in the `system` module. The following code shows how to use the `system` class to solve the diffusive SIR model:
 
 ```python
 import cusir.system as cs
@@ -69,8 +66,8 @@ s = cs.system(Lx, Ly)
 # Define the system parameters
 s.beta = 1 # Transmission rate
 s.gamma = 0.1 # Recovery/removal rate  
-s.D_I = 0.1 # Diffusion coefficient for infected individuals
-s.D_S = 0.1 # Diffusion coefficient for susceptible individuals
+s.D_I = 1 # Diffusion coefficient for infected individuals
+s.D_S = 1 # Diffusion coefficient for susceptible individuals
 
 # Define the initial conditions
 s.set_plane_initial_conditions()
