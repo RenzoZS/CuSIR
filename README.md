@@ -1,10 +1,7 @@
----
-lang: en-US
----
-
+<!-- LTeX: language=en-US -->
 # CuSIR
 
-## Introduction
+## Introduction 
 CuSIR is a Python code built on top of CuPy, a NumPy-like library for GPU-accelerated computing. It provides a solver for the two-dimensional diffusive SIR model, described by the following system of reaction-diffusion equations:
 
 $$
@@ -12,7 +9,8 @@ $$
 \partial_t S &= -\beta_{\mathbf{r}} S I - \gamma I + D_I \nabla^2 I \\ 
 \partial_t I &= \beta_{\mathbf{r}} S I + D_S \nabla^2 S - \mathbf{v} \cdot \nabla I,
 \end{align}
-$${#system}
+$$
+
 where $S$ is the density of susceptible individuals, $I$ is the density of infected individuals, $\beta_{\mathbf{r}}$ is the transmission rate that depends on the location $\mathbf{r}$, $\gamma$ is the recovery/removal rate, $D_I$ and $D_S$ are diffusion coefficients, and $\mathbf{v}$ is the convection field. 
 
 ## Implementation
@@ -21,9 +19,10 @@ The system is solved using a finite difference method on a uniform grid. The spa
 $$
 \begin{align}
 S^{n+1}_{i,j} &= S^n_{i,j} - \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t - \gamma I^n_{i,j} \Delta t + D_I \left( \frac{S^n_{i+1,j} - 2 S^n_{i,j} + S^n_{i-1,j}}{\Delta x^2} + \frac{S^n_{i,j+1} - 2 S^n_{i,j} + S^n_{i,j-1}}{\Delta y^2} \right) \Delta t,\\
-I^{n+1}_{i,j} &= I^n_{i,j} + \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t + D_S \left( \frac{I^n_{i+1,j} - 2 I^n_{i,j} + I^n_{i-1,j}}{\Delta x^2} + \frac{I^n_{i,j+1} - 2 I^n_{i,j} + I^n_{i,j-1}}{\Delta y^2} \right) \Delta t- v_{i,j} \left( \frac{I^n_{i+1,j} - I^n_{i-1,j}}{2 \Delta x}, \frac{I^n_{i,j+1} - I^n_{i,j-1}}{2 \Delta y} \right) \Delta t,
+I^{n+1}_{i,j} &= I^n_{i,j} + \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t + D_S \left( \frac{I^n_{i+1,j} - 2 I^n_{i,j} + I^n_{i-1,j}}{\Delta x^2} + \frac{I^n_{i,j+1} - 2 I^n_{i,j} + I^n_{i,j-1}}{\Delta y^2} \right) \Delta t \\&- \mathbf{v}_{i,j} \cdot \left( \frac{I^n_{i+1,j} - I^n_{i-1,j}}{2 \Delta x}, \frac{I^n_{i,j+1} - I^n_{i,j-1}}{2 \Delta y} \right) \Delta t,\nonumber
 \end{align}
 $$
+
 where $\Delta t$ is the time step equals to $0.01$ by default, $\Delta x=1$ and $\Delta y=1$ are the spatial steps in the $x$ and $y$ directions, respectively, and $n$ is the time step index while $i,j$ are the spatial indices. The system is updated using a forward Euler scheme in time and a centered difference scheme in space. The system is solved with any given initial conditions and periodic or rigid boundary conditions in the $x$ and $y$ directions. The system is solved using a single GPU.
 
 
@@ -51,7 +50,7 @@ This command will install the latest version of the CuSIR package. It is mandato
 
 ## Usage
 
-The CuSIR package provides a solver for the two-dimensional ([1-2](#heading-ids)) 
+The CuSIR package provides a solver for the two-dimensional ([1-2](#system)) 
 diffusive SIR system. The solver is implemented in the `system` class, which is located in the `system` module.
 
 The following code shows how to use the `system` class to solve the diffusive SIR system:
