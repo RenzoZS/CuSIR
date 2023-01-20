@@ -87,9 +87,6 @@ S = s.S.get() # get() pulls the data from the GPU to the CPU as a NumPy array
 I = s.I.get()
 ```
 
-
-
-
 ## License
 
 CuSIR is licensed under the MIT license. See the `LICENSE` file for more details.
