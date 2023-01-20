@@ -84,6 +84,12 @@ for _ in range(10000):
 S = s.S.get() # get() pulls the data from the GPU to the CPU as a NumPy array
 I = s.I.get()
 ```
+## OpenCV visualization
+
+In the `tests` folder, you will find a Python script called `opencv_real_time_visualization.py` that shows how to use the OpenCV library to visualize the solution of the diffusive SIR model interactively in real time. The following gif shows the result of running the script (of course you will need to install OpenCV to run the script):
+
+![](opencv.gif)
+
 
 ## License
 

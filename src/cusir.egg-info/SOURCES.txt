@@ -1,9 +1,10 @@
 LICENSE
 README.md
+READMEPyPI.md
 pyproject.toml
 setup.cfg
 src/cusir/__init__.py
-src/cusir/cusir.py
+src/cusir/system.py
 src/cusir.egg-info/PKG-INFO
 src/cusir.egg-info/SOURCES.txt
 src/cusir.egg-info/dependency_links.txt
