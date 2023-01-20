@@ -86,7 +86,7 @@ I = s.I.get()
 ```
 ## OpenCV visualization
 
-In the `tests` folder, you will find a Python script called `opencv_real_time_visualization.py` that shows how to use the OpenCV library to visualize the solution of the diffusive SIR model interactively in real time. The following gif shows the result of running the script (of course you will need to install OpenCV to run the script):
+In the `tests` folder, you will find a Python script called `opencv_real_time_visualization.py` that shows how to use the OpenCV library to visualize the solution of the diffusive SIR model interactively in real time. The following gif shows the result of running the script (you will need to install OpenCV to run the script):
 
 ![](opencv.gif)
 
