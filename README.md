@@ -16,21 +16,7 @@ where $S$ is the density of susceptible individuals, $I$ is the density of infec
 ## Implementation
 The system is solved using a finite difference method on a uniform grid. The spatial domain is discretized into $L_x \times L_y$ cells. The system is updated using the following scheme:
 
-$$
-\begin{align}
-S^{n+1}_{i,j} &= S^n_{i,j} - \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t - \gamma I^n_{i,j} \Delta t + D_I \left( (S^n_{i+1,j} - 2 S^n_{i,j} + S^n_{i-1,j})/(\Delta x^2) + (S^n_{i,j+1} - 2 S^n_{i,j} + S^n_{i,j-1})/(\Delta y^2) \right) \Delta t,\\
-I^{n+1}_{i,j} &= I^n_{i,j} + \beta_{\mathbf{r}} S^n_{i,j} I^n_{i,j} \Delta t + D_S \left( (I^n_{i+1,j} - 2 I^n_{i,j} + I^n_{i-1,j})/(\Delta x^2) + (I^n_{i,j+1} - 2 I^n_{i,j} + I^n_{i,j-1})(\Delta y^2) \right) \Delta t \\
-&- \mathbf{v}_{i,j} \cdot \left( (I^n_{i+1,j} - I^n_{i-1,j})/(2 \Delta x), (I^n_{i,j+1} - I^n_{i,j-1})/(2 \Delta y) \right) \Delta t,\nonumber
-\end{align}
-$$
-
-$$
-\begin{align*}
-S^{n+1}_{i,j} &= S^n_{i,j} - \beta_r S^n_{i,j} I^n_{i,j} \Delta t - \gamma I^n_{i,j} \Delta t + D_I \left( \frac{S^n_{i+1,j} - 2 S^n_{i,j} + S^n_{i-1,j}}{\Delta x^2} + \frac{S^n_{i,j+1} - 2 S^n_{i,j} + S^n_{i,j-1}}{\Delta y^2} \right) \Delta t\\
-I^{n+1}_{i,j} &= I^n_{i,j} + \beta_r S^n_{i,j} I^n_{i,j} \Delta t + D_S \left( \frac{I^n_{i+1,j} - 2 I^n_{i,j} + I^n_{i-1,j}}{\Delta x^2} + \frac{I^n_{i,j+1} - 2 I^n_{i,j} + I^n_{i,j-1}}{\Delta y^2} \right) \Delta t \\
-&- v_{i,j} \cdot \left( \frac{I^n_{i+1,j} - I^n_{i-1,j}}{2 \Delta x}, \frac{I^n_{i,j+1} - I^n_{i,j-1}}{2 \Delta y} \right) \Delta t
-\end{align*}
-$$
+![alt text](image.png)
 
 where $\Delta t$ is the time step equals to $0.01$ by default, $\Delta x=1$ and $\Delta y=1$ are the spatial steps in the $x$ and $y$ directions, respectively, and $n$ is the time step index while $i,j$ are the spatial indices. The system is updated using a forward Euler scheme in time and a centered difference scheme in space. The system is solved with any given initial conditions and periodic or rigid boundary conditions in the $x$ and $y$ directions. The system is solved using a single GPU.
 
